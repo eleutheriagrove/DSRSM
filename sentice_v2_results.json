@@ -1,0 +1,40 @@
+{
+  "version": "0.7.0",
+  "tests": [
+    {
+      "name": "Sprime_pi_identically_zero",
+      "Sprime_pi": 4.653657836759941e-17
+    },
+    {
+      "name": "toy_dies_on_bimodal",
+      "kJ_argmax": 0.8203125,
+      "kJ_moment": 0.34017281284135764,
+      "kJ_fisher_ridge": 0.22632911392405064,
+      "k_fat": 0.12,
+      "k_spike": 0.82,
+      "argmax_locks_spike": true,
+      "ridge_locks_fat": true
+    },
+    {
+      "name": "width_gate_not_length",
+      "L": 512.0,
+      "w": 48.0,
+      "kappa": 0.041666666666666664,
+      "family": "fallback-heat",
+      "gate": "width_gate_heat",
+      "r3_belt": false
+    },
+    {
+      "name": "fat_caustic_families",
+      "kappa": 0.08,
+      "r3_Smin": -571.6845802063195,
+      "r3_negative": true,
+      "routed_family": "fallback-heat",
+      "routed_gate": "width_gate_heat",
+      "r5_attempt_Smin": 0.0,
+      "r5_attempt_Smax": 8203.491743958344,
+      "r5_attempt_peak_kJ": 0.5680000000000001,
+      "r5_peak_on_target": false
+    }
+  ]
+}
