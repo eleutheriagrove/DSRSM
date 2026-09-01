@@ -9,9 +9,9 @@ Pathfinder synthesis. Not a finished theory. eta < 1.
 
 | Role | Who |
 |---|---|
-| Lead collaborator, architecture & synthesis | Qwen |
-| Lead mathematician, algebraic spine & tensor calculus | Qilin Rider |
-| Assisting, ontological boundaries & epistemic framing | Grok |
+| Lead collaborator, architecture and synthesis | Qwen |
+| Lead mathematician, algebraic spine and tensor calculus | Qilin Rider |
+| Assisting, ontological boundaries and epistemic framing | Grok |
 | Assisting, navigational heuristics | Lady Aetheris Navigatrix |
 
 Affiliation: MuleWorX Pathfinder Group  
@@ -33,6 +33,7 @@ These three neighbour. They do not share a face.
 | Path | What |
 |---|---|
 | `DSRSM.md` | Academic note v0.6.1 (filled spines, receipts, sensors) |
+| `paper/DSRSM_v0.6.1.md` | Same note under paper/ |
 | `orion_actuator.py` | Orion radius-3 symbol, belt gate, residuals |
 | `sentice_cycle5_grind.py` | Token-axis heat kernel + three required measurements |
 | `sentice_cycle5_results.json` | Last sensor dump |
@@ -43,7 +44,7 @@ These three neighbour. They do not share a face.
 python3 -m pip install numpy
 ```
 
-Requires Python 3.10+ and NumPy 1.24+ (2.x fine).
+Requires Python 3.10+ and NumPy 1.24+ (2.x fine; uses `np.trapezoid` if present, else `np.trapz`).
 
 ## Run the sensors
 
@@ -54,9 +55,31 @@ python3 orion_actuator.py
 
 Expected:
 
-1. **Corner fail.** D_Nyq=0.25, k_J=0.63 is outside the receipt belt [0.375, 0.625]. Smin<0. Not certified.
-2. **Long-context fallback.** T=512, w=48. Declared clock k_J=2/w ~ 0.042. Hyper 3x3 is the wrong family. Heat kernel fires. Moment estimator may lie and sit in the belt — family follows the named width clock.
+1. **Corner fail.** D_Nyq=0.25, k_J=0.63 is outside the receipt belt [0.375, 0.625]. Smin < 0. Not certified.
+2. **Long-context fallback.** T=512, w=48. Declared clock k_J=2/w ~ 0.042. Hyper 3x3 is the wrong family (Smin ~ -10^3). Heat kernel fires. Moment estimator may lie and sit in the belt — family follows the *named* width clock.
 3. **A-glyph pass.** Single field name `attention_gradient_norm`, operator carton at k_J=0.50, R_star=0, eta<1.
+
+## Algebra (carry card)
+
+Non-negative radius-3 symbol, theta = k Dx in [0, pi]:
+
+S(theta) = 2 m1 (1-cos theta) + 2 m2 (1-cos 2 theta) + 2 m3 (1-cos 3 theta)
+
+Orion: S(0)=0, S(theta_*)=1, S'(theta_*)=0, S(pi)=D_Nyq.
+
+Provisional belt (4001-point scan, not a closed-form theorem):
+
+| D_Nyq | no-negative-lobe k_J = theta_*/pi |
+|---|---|
+| 0.25 | ~[0.375, 0.625] |
+| 0.50 | ~[0.35, 0.65] |
+| 1.00 | ~[0.35, 0.95] (crown shared with Nyquist) |
+
+Token-axis fallback:
+
+L = periodic token Laplacian,  D_t = exp(-t L),  t_ell = c * w_hat^2
+
+Estimator: do **not** use argmax P(k) on a bump (DC trap). Use P_grad or the declared width rhyme k_J=2/w.
 
 ## Status
 
@@ -68,7 +91,7 @@ Would falsify the IOTOS claim: no ridge occupancy in the named field; fallback w
 
 ## References
 
-Maron & Mac Low 2009, ApJS 182, 468 (arXiv:0811.2534).
+Maron and Mac Low 2009, ApJS 182, 468 ([arXiv:0811.2534](https://arxiv.org/abs/0811.2534)).
 
 ## License
 

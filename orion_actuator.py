@@ -1,6 +1,8 @@
 """Orion radius-3 symbol + belt gate. DSRSM v0.6.1 companion."""
 import numpy as np
 
+_trapz = getattr(np, "trapezoid", None) or np.trapz
+
 def orion_weights(kJ, Dnyq=0.5):
     th = np.pi * float(np.clip(kJ, 1e-3, 0.999))
     A = np.array([
@@ -24,19 +26,16 @@ def belt_ok(kJ, Dnyq=0.5):
         return 0.35 <= kJ <= 0.65
     if abs(Dnyq - 1.0) < 1e-12:
         return kJ >= 0.35
-    if abs(Dnyq - 0.25) < 1e-12:
-        return 0.375 <= kJ <= 0.625
-    return False
+    return 0.375 <= kJ <= 0.625
 
 def residuals(m, kJ, n=2001):
     th = np.linspace(0.0, np.pi, n)
     S = S_of(th, m)
     th_star = np.pi * kJ
-    pos_int = np.trapezoid if hasattr(np, "trapezoid") else np.trapz
     return dict(
         R_D0=float(abs(S_of(0.0, m))),
         R_peak=float(abs(th[int(np.argmax(S))] - th_star)),
-        R_pos=float(pos_int(np.clip(-S, 0.0, None), th)),
+        R_pos=float(_trapz(np.clip(-S, 0.0, None), th)),
         Smin=float(S.min()),
         Smax=float(S.max()),
     )
