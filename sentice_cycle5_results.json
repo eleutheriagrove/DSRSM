@@ -1,0 +1,55 @@
+{
+  "version": "0.6.1",
+  "corner_receipt": {
+    "name": "corner_Dnyq=0.25_kJ=0.63",
+    "belt_ok": false,
+    "cond": 3.682171036431281,
+    "Smin": -0.0010447651293690047,
+    "negative_lobe": true,
+    "certified": false,
+    "required_outcome": "RECEIPT_FAIL",
+    "observed_outcome": "RECEIPT_FAIL"
+  },
+  "long_context": {
+    "name": "long_context_caustic",
+    "T": 512,
+    "width_tokens": 48.0,
+    "kJ_width_rhyme": 0.041666666666666664,
+    "kJ_moment": 0.4818337704784496,
+    "moment_would_have_certified_hyper": true,
+    "w_hat": 48.0,
+    "t_ell": 576.0,
+    "chosen_family": "fallback-heat",
+    "fallback_fired": true,
+    "forced_hyper_Smin": -7992.278156266425,
+    "forced_hyper_cond": 3683.465544537477,
+    "forced_hyper_anti_diffusion": true,
+    "heat_energy_in": 21592.298421548017,
+    "heat_energy_out": 17412.825302139194,
+    "heat_dissipated": true,
+    "K_row_sum_err": 2.278177646530821e-13
+  },
+  "A_glyph": {
+    "name": "A_glyph_freeze",
+    "passed": true,
+    "eta_lt_1": true,
+    "field": "attention_gradient_norm",
+    "family": "orion-r3-hyper",
+    "kJ_freeze": 0.5,
+    "kJ_from_this_G": 0.1354792234060978,
+    "packet_entropy": 3.071269343326029,
+    "R": {
+      "R_D0": 0.0,
+      "R_peak": 0.0,
+      "R_pos": 0.0,
+      "Smin": 0.0,
+      "Smax": 1.0
+    },
+    "plumb_bob": {
+      "origin": "observer-imported token axis / DFT convention rfftfreq",
+      "rails_meet_at_infinity": false,
+      "eta_lt_1": true
+    }
+  },
+  "all_three_ran": true
+}
