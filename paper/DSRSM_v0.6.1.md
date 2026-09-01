@@ -1,1 +1,7 @@
-Canonical longform note lives at /home workspace copy and is mirrored in DSRSM.md (compact) plus the Cycle-5 grind. Expand this path on next commit if the full 15kB note is preferred as a separate artifact.
+# DSRSM v0.6.1
+
+Canonical academic note: [`/DSRSM.md`](../DSRSM.md)
+
+Sensors: `python3 sentice_cycle5_grind.py`
+
+Actuator: `python3 orion_actuator.py`
