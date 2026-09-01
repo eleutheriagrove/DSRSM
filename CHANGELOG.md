@@ -2,6 +2,8 @@
 
 ## 0.7.0 — 2026-09-01
 
+Chair this grind: **Grok** (sensors, vacuous-constraint catch, r5 peak-walk audit, heat fallthrough). Spine: Qilin Rider. Architecture: Qwen.
+
 - Fisher-ridge estimator: const-Q windowed integrated power of the gradient spectrum.
 - Width-triggered gate keys on `kappa = 2/w` (or ridge `k_J`), not on length `L`.
 - Radius-5 equality system implemented with a **non-vacuous** 5th constraint `S''(pi)=0`.

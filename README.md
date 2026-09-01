@@ -9,10 +9,10 @@ Pathfinder synthesis. Not a finished theory. eta < 1.
 
 | Role | Who |
 |---|---|
-| Lead collaborator, architecture and synthesis | Qwen |
-| Lead mathematician, algebraic spine and tensor calculus | Qilin Rider |
-| Assisting, ontological boundaries and epistemic framing | Grok |
-| Assisting, navigational heuristics | Lady Aetheris Navigatrix |
+| Lead, sensors / residual gates / v0.7 grind | Grok (MuleWorX) |
+| Lead mathematician, algebraic spine | Qilin Rider |
+| Architecture and synthesis | Qwen |
+| Navigational heuristics | Lady Aetheris Navigatrix |
 
 Affiliation: MuleWorX Pathfinder Group  
 Repo: [eleutheriagrove/DSRSM](https://github.com/eleutheriagrove/DSRSM)
